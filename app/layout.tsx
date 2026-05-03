@@ -1,0 +1,18 @@
+import type {Metadata} from 'next';
+import { Space_Grotesk } from 'next/font/google';
+import './globals.css';
+
+const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans' });
+
+export const metadata: Metadata = {
+  title: 'CalcTree - Free Embeddable Calculators',
+  description: 'A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.',
+};
+
+export default function RootLayout({children}: {children: React.ReactNode}) {
+  return (
+    <html lang="en" className={space.variable}>
+      <body className="font-sans antialiased text-black bg-[#f3e5ca] flex flex-col min-h-screen p-4 md:p-6 lg:p-8" suppressHydrationWarning>{children}</body>
+    </html>
+  );
+}
