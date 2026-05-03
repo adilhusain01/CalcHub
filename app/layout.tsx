@@ -1,18 +1,59 @@
-import type {Metadata} from 'next';
-import { Space_Grotesk } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Space_Grotesk } from "next/font/google";
+import "./globals.css";
 
-const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans' });
+const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" });
+
+export const metadataBase = new URL("https://calchub.adilhusain.xyz");
 
 export const metadata: Metadata = {
-  title: 'CalcTree - Free Embeddable Calculators',
-  description: 'A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.',
+  title: "CalcHub - Free Embeddable Calculators",
+  description:
+    "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+  metadataBase,
+  openGraph: {
+    title: "CalcHub - Free Embeddable Calculators",
+    description:
+      "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+    url: "https://calchub.adilhusain.xyz",
+    siteName: "CalcHub",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "CalcHub - Free Embeddable Calculators",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CalcHub - Free Embeddable Calculators",
+    description:
+      "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo.png",
+  },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={space.variable}>
-      <body className="font-sans antialiased text-black bg-[#f3e5ca] flex flex-col min-h-screen p-4 md:p-6 lg:p-8" suppressHydrationWarning>{children}</body>
+      <body
+        className="font-sans antialiased text-black bg-[#f3e5ca] flex flex-col min-h-screen p-4 md:p-6 lg:p-8"
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   );
 }
