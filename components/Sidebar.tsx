@@ -52,13 +52,14 @@ export function SidebarItem({
 
 export function Sidebar() {
   return (
-    <aside className="w-full lg:w-72 border-[3px] border-black rounded-[32px] p-6 flex flex-col gap-8 shrink-0 self-start sticky top-6 bg-[#f3e5ca]">
+    <aside className="w-full lg:w-72 border-[3px] border-black rounded-[32px] p-6 flex flex-col gap-8 shrink-0 self-start lg:sticky top-6 bg-[#f3e5ca]">
       <Link
         href="/"
         className="flex items-center gap-3 bg-white border-[3px] border-black rounded-[24px] p-4 group hover:-translate-y-1 transition-transform shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
       >
         <div className="bg-[#4a8eff] border-[2px] border-black rounded-full w-12 h-12 flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform">
-          <Calculator className="h-6 w-6 text-white" />
+          {/* <Calculator className="h-6 w-6 text-white" /> */}
+          <img src="logo.png" alt="" className="rounded-full" />
         </div>
         <div>
           <h1 className="font-extrabold text-2xl tracking-tight leading-none text-black">

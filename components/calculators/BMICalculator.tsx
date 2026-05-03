@@ -64,7 +64,7 @@ export function BMICalculator() {
         </div>
 
         {unit === 'metric' ? (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label>Weight (kg)</Label>
               <Input type="number" value={weight} onChange={e => setWeight(e.target.value === '' ? '' : Number(e.target.value))} />
@@ -75,16 +75,16 @@ export function BMICalculator() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-4">
-            <div className="space-y-2 col-span-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="space-y-2 sm:col-span-3">
               <Label>Weight (lbs)</Label>
               <Input type="number" value={weight} onChange={e => setWeight(e.target.value === '' ? '' : Number(e.target.value))} />
             </div>
-            <div className="space-y-2 col-span-1">
+            <div className="space-y-2 sm:col-span-1">
               <Label>Height (ft)</Label>
               <Input type="number" value={ft} onChange={e => setFt(e.target.value === '' ? '' : Number(e.target.value))} />
             </div>
-            <div className="space-y-2 col-span-2">
+            <div className="space-y-2 sm:col-span-2">
               <Label>Height (in)</Label>
               <Input type="number" value={inVal} onChange={e => setInVal(e.target.value === '' ? '' : Number(e.target.value))} />
             </div>

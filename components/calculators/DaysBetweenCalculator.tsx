@@ -38,7 +38,7 @@ export function DaysBetweenCalculator() {
         <CardDescription>Find out exactly how many days apart two dates are.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label>Start Date</Label>
             <Input type="date" value={start} onChange={e => setStart(e.target.value)} />

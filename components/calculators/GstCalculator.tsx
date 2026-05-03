@@ -78,7 +78,7 @@ export function GstCalculator() {
             <div className="flex justify-between">
               <Label>GST Rate</Label>
             </div>
-            <div className="grid grid-cols-4 gap-2 pt-1">
+            <div className="grid grid-cols-2 gap-2 pt-1 sm:grid-cols-4">
               {[5, 10, 15, 20].map((pct) => (
                 <Button 
                   key={pct}

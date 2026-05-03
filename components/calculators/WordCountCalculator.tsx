@@ -37,7 +37,7 @@ export function WordCountCalculator() {
            onChange={e => setText(e.target.value)}
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
            <div className="bg-[#f8d8a7] border-[3px] border-black rounded-xl p-4 text-center shadow-[4px_4px_0_0_#000]">
               <p className="text-3xl font-black text-black">{stats.words}</p>
               <p className="text-xs font-bold uppercase tracking-widest mt-1 text-black">Words</p>

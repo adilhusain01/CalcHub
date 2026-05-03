@@ -30,7 +30,7 @@ export function RandomNumberGenerator() {
         <CardDescription>Generate a random number within a specific range.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label>Min Number</Label>
             <Input type="number" value={min} onChange={e => setMin(e.target.value === '' ? '' : Number(e.target.value))} />

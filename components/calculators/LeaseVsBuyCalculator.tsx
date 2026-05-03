@@ -62,12 +62,12 @@ export function LeaseVsBuyCalculator() {
       </CardHeader>
       <CardContent className="pt-6 space-y-4">
         
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <div className="space-y-2 flex-1">
             <Label>Car Price</Label>
             <Input type="number" value={carPrice} onChange={e => setCarPrice(e.target.value === '' ? '' : Number(e.target.value))} />
           </div>
-          <div className="space-y-2 flex-[0.5]">
+          <div className="space-y-2 flex-1 sm:flex-[0.5]">
             <Label>Term (mos)</Label>
             <Input type="number" value={term} onChange={e => setTerm(e.target.value === '' ? '' : Number(e.target.value))} />
           </div>
@@ -75,22 +75,22 @@ export function LeaseVsBuyCalculator() {
         
         <div className="border-t border-gray-100 my-2 pt-2">
             <p className="text-sm font-semibold text-gray-900 mb-2">Lease Terms</p>
-            <div className="flex gap-2 mb-2">
-                <div className="space-y-2 flex-1"><Label>Residual Val</Label><Input type="number" value={residualValue} onChange={e => setResidualValue(e.target.value === '' ? '' : Number(e.target.value))}/></div>
-                <div className="space-y-2 flex-1"><Label>Down Pmt</Label><Input type="number" value={leaseDown} onChange={e => setLeaseDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
-                <div className="space-y-2 flex-1"><Label>Money Factor</Label><Input type="number" step="0.0001" value={moneyFactor} onChange={e => setMoneyFactor(e.target.value === '' ? '' : Number(e.target.value))}/></div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mb-2">
+                <div className="space-y-2"><Label>Residual Val</Label><Input type="number" value={residualValue} onChange={e => setResidualValue(e.target.value === '' ? '' : Number(e.target.value))}/></div>
+                <div className="space-y-2"><Label>Down Pmt</Label><Input type="number" value={leaseDown} onChange={e => setLeaseDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
+                <div className="space-y-2"><Label>Money Factor</Label><Input type="number" step="0.0001" value={moneyFactor} onChange={e => setMoneyFactor(e.target.value === '' ? '' : Number(e.target.value))}/></div>
             </div>
         </div>
 
         <div className="border-t border-gray-100 my-2 pt-2">
             <p className="text-sm font-semibold text-gray-900 mb-2">Loan Terms</p>
-            <div className="flex gap-4">
-                <div className="space-y-2 flex-1"><Label>Interest Rate (%)</Label><Input type="number" step="0.1" value={loanRate} onChange={e => setLoanRate(e.target.value === '' ? '' : Number(e.target.value))}/></div>
-                <div className="space-y-2 flex-1"><Label>Down Pmt</Label><Input type="number" value={buyDown} onChange={e => setBuyDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2"><Label>Interest Rate (%)</Label><Input type="number" step="0.1" value={loanRate} onChange={e => setLoanRate(e.target.value === '' ? '' : Number(e.target.value))}/></div>
+                <div className="space-y-2"><Label>Down Pmt</Label><Input type="number" value={buyDown} onChange={e => setBuyDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
             </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mt-6">
+        <div className="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
           <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-center shadow-sm">
             <p className="text-blue-800 text-xs font-semibold uppercase tracking-wider mb-1">Lease Monthly</p>
             <p className="text-2xl font-bold text-blue-900 tracking-tight">

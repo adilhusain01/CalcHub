@@ -32,7 +32,7 @@ export function TextCaseConverter() {
            onChange={e => setText(e.target.value)}
         />
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
            <Button variant="secondary" onClick={toUpper} className="h-10 text-sm">UPPERCASE</Button>
            <Button variant="secondary" onClick={toLower} className="h-10 text-sm">lowercase</Button>
            <Button variant="secondary" onClick={toTitle} className="h-10 text-sm">Title Case</Button>

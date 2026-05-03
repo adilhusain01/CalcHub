@@ -40,7 +40,7 @@ export function TimeDurationCalculator() {
         <CardDescription>Calculate hours and minutes between two times.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label>Start Time</Label>
             <Input type="time" value={start} onChange={e => setStart(e.target.value)} />

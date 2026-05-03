@@ -34,7 +34,7 @@ export function WaterIntakeCalculator() {
         <CardDescription>Daily hydration goal based on your body weight.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label>Weight (lbs)</Label>
             <Input type="number" value={weight} onChange={e => setWeight(e.target.value === '' ? '' : Number(e.target.value))} />
@@ -50,7 +50,7 @@ export function WaterIntakeCalculator() {
           <p className="text-5xl font-black tracking-tight text-white mb-2" style={{textShadow: '2px 2px 0 #000'}}>
              {Math.round(totalOz)} <span className="text-xl">oz</span>
           </p>
-          <div className="grid grid-cols-2 mt-4 pt-4 border-t-[3px] border-black text-black">
+          <div className="grid grid-cols-1 gap-4 mt-4 pt-4 border-t-[3px] border-black text-black sm:grid-cols-2">
              <div>
                <p className="text-xs font-bold uppercase tracking-wider">In Liters</p>
                <p className="text-xl font-bold">{liters.toFixed(1)} L</p>

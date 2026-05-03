@@ -39,7 +39,7 @@ export function CompoundInterestCalculator() {
         <CardDescription>See how your money grows over time.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-2">
             <Label>Initial Deposit</Label>
             <Input type="number" value={principal} onChange={e => setPrincipal(e.target.value === '' ? '' : Number(e.target.value))} />

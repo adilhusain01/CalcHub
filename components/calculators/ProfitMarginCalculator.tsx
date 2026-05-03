@@ -46,7 +46,7 @@ export function ProfitMarginCalculator() {
           <p className="text-5xl font-black tracking-tight text-white" style={{textShadow: '2px 2px 0 #000'}}>
             {margin.toFixed(2)}%
           </p>
-          <div className="grid grid-cols-2 mt-4 pt-4 border-t-[3px] border-black text-black">
+          <div className="grid grid-cols-1 gap-4 mt-4 pt-4 border-t-[3px] border-black text-black sm:grid-cols-2">
              <div>
                 <p className="text-xs font-bold uppercase tracking-wider">Markup</p>
                 <p className="text-xl font-black">{markup.toFixed(2)}%</p>

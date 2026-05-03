@@ -1,20 +1,81 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h1>CalcHub</h1>
+  <p>Free embeddable calculators for finance, health, business, and everyday workflows.</p>
 </div>
 
-# Run and deploy your AI Studio app
+## Overview
 
-This contains everything you need to run your app locally.
+CalcHub is a Next.js app that serves a library of niche calculators with enhanced SEO and social preview support. It includes dynamic calculator pages, embed-friendly views, and responsive layouts across mobile, tablet, and desktop.
 
-View your app in AI Studio: https://ai.studio/apps/2a2627b4-b541-4c8a-a530-aea0da3cb2d1
+### Highlights
 
-## Run Locally
+- Free calculator library with embeddable widgets
+- SEO-ready metadata for Open Graph and Twitter cards
+- Public discovery files: `robots.txt`, `llms.txt`, and `sitemap.xml`
+- Responsive Tailwind UI across all devices
+- Search-friendly sharing at `https://calchub.adilhusain.xyz`
 
-**Prerequisites:**  Node.js
+## Getting Started
 
+### Prerequisites
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Node.js 20+ recommended
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Run production build
+
+```bash
+npm run start
+```
+
+### Additional commands
+
+```bash
+npm run lint
+npm run clean
+```
+
+## SEO & Sharing Files
+
+This app includes built-in support for standard discovery and share metadata:
+
+- `public/robots.txt`
+- `public/llms.txt`
+- `app/sitemap.ts` → generates `/sitemap.xml`
+- `app/layout.tsx` → root metadata, OG/Twitter preview settings
+- `public/og.png` → shared preview image
+
+## Project Structure
+
+- `app/` — Next.js App Router pages and layouts
+- `components/` — UI building blocks and calculator components
+- `lib/` — shared calculator metadata and helpers
+- `public/` — static assets and SEO files
+
+## Notes
+
+If you are using AI Studio or any Google Gemini integration, configure `.env.local` as needed. Otherwise, CalcHub runs without additional environment variables.
+
+---
+
+Built with Next.js, React, and Tailwind CSS.

@@ -46,7 +46,7 @@ export function SalaryToHourlyCalculator() {
           <p className="text-5xl font-black tracking-tight text-black mb-4">
             ${hourly.toFixed(2)}<span className="text-xl">/hr</span>
           </p>
-          <div className="grid grid-cols-2 gap-4 border-t-[3px] border-black pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t-[3px] border-black pt-4">
              <div>
                <p className="text-xs font-bold uppercase tracking-wider">Weekly</p>
                <p className="text-xl font-bold">${weekly.toFixed(2)}</p>

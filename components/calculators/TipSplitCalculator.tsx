@@ -56,7 +56,7 @@ export function TipSplitCalculator() {
               <Label>Tip Percentage</Label>
               <span className="text-sm font-semibold text-gray-900">{tipPercentage}%</span>
             </div>
-            <div className="grid grid-cols-4 gap-2 pt-1">
+            <div className="grid grid-cols-2 gap-2 pt-1 sm:grid-cols-4">
               {[15, 18, 20, 25].map((pct) => (
                 <Button 
                   key={pct}
