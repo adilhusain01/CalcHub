@@ -76,6 +76,12 @@ import { Calculator060 } from '@/components/calculators/060Calculator';
 import { HorsepowerCalculator } from '@/components/calculators/HorsepowerCalculator';
 import { TireSizeCalculator } from '@/components/calculators/TireSizeCalculator';
 import { EvChargingCalculator } from '@/components/calculators/EvChargingCalculator';
+import { PizzaValueCalculator } from '@/components/calculators/PizzaValueCalculator';
+import { BingeWatchCalculator } from '@/components/calculators/BingeWatchCalculator';
+import { AlienAgeCalculator } from '@/components/calculators/AlienAgeCalculator';
+import { DownloadTimeCalculator } from '@/components/calculators/DownloadTimeCalculator';
+import { CaffeineCrashCalculator } from '@/components/calculators/CaffeineCrashCalculator';
+import { MockingCaseConverter } from '@/components/calculators/MockingCaseConverter';
 export function getCalculatorComponent(slug: string) {
   switch (slug) {
     case 'emi': return <EmiCalculator />;
@@ -154,6 +160,12 @@ export function getCalculatorComponent(slug: string) {
     case 'horsepower': return <HorsepowerCalculator />;
     case 'tire-size': return <TireSizeCalculator />;
     case 'ev-charging': return <EvChargingCalculator />;
+    case 'pizza-value': return <PizzaValueCalculator />;
+    case 'binge-watch': return <BingeWatchCalculator />;
+    case 'alien-age': return <AlienAgeCalculator />;
+    case 'download-time': return <DownloadTimeCalculator />;
+    case 'caffeine-crash': return <CaffeineCrashCalculator />;
+    case 'mocking-case': return <MockingCaseConverter />;
     default: return <div className="p-8 text-center text-xl font-bold bg-white border-[3px] border-black rounded-[24px]">Calculator under construction.</div>;
   }
 }

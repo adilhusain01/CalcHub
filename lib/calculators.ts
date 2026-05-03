@@ -1,4 +1,4 @@
-export type Category = "Finance" | "Health" | "Business" | "Everyday" | "Auto" | "Math" | "Tools";
+export type Category = "Finance" | "Health" | "Business" | "Everyday" | "Auto" | "Math" | "Tools" | "Fun";
 
 export interface CalculatorMeta {
   slug: string;
@@ -260,5 +260,12 @@ export const calculatorsList: CalculatorMeta[] = [
   { slug: '0-60', title: '0-60 Time Estimator', description: 'Estimate a car\'s 0-60 mph time based on weight and horsepower.', category: 'Auto', iconName: 'TimerReset' },
   { slug: 'horsepower', title: 'Horsepower to kW', description: 'Convert engine power between Horsepower and Kilowatts.', category: 'Auto', iconName: 'Zap' },
   { slug: 'tire-size', title: 'Tire Size Comparison', description: 'Compare tire dimensions and find speedometer differences.', category: 'Auto', iconName: 'Circle' },
-  { slug: 'ev-charging', title: 'EV Charging Time', description: 'Calculate how long it takes to charge an Electric Vehicle.', category: 'Auto', iconName: 'BatteryCharging' }
+  { slug: 'ev-charging', title: 'EV Charging Time', description: 'Calculate how long it takes to charge an Electric Vehicle.', category: 'Auto', iconName: 'BatteryCharging' },
+  // --- New Fun & Needy Calculators ---
+  { slug: 'pizza-value', title: 'Pizza Value', description: 'Find the better deal per square inch between two pizzas.', category: 'Everyday', iconName: 'Pizza' },
+  { slug: 'binge-watch', title: 'Binge-Watch Time', description: 'Calculate how much time you need to binge a whole TV show.', category: 'Everyday', iconName: 'Tv' },
+  { slug: 'alien-age', title: 'Alien Age', description: 'Discover your age in different parts of the solar system.', category: 'Fun', iconName: 'Rocket' },
+  { slug: 'download-time', title: 'Download Time', description: 'Estimate how long a large file will take to download.', category: 'Tools', iconName: 'Download' },
+  { slug: 'caffeine-crash', title: 'Caffeine Crash', description: 'Find out when the coffee jitters will wear off and sleep can begin.', category: 'Health', iconName: 'Coffee' },
+  { slug: 'mocking-case', title: 'Mocking Case', description: 'cOnVeRt TeXt To MoCkInG cAsE.', category: 'Fun', iconName: 'MessageSquare' }
 ];
