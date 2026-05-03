@@ -7,9 +7,9 @@ const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" });
 export const metadataBase = new URL("https://calchub.adilhusain.xyz");
 
 export const metadata: Metadata = {
-  title: "CalcHub - Free Embeddable Calculators",
+  title: "CalcHub - Free Calculators",
   description:
-    "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+    "A library of niche calculators for all your needs. Fully SEO-optimized and free to use.",
   metadataBase,
   applicationName: "CalcHub",
   generator: "Next.js",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "CalcHub - Free Embeddable Calculators",
+    title: "CalcHub - Free Calculators",
     description:
-      "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+      "A library of niche calculators for all your needs. Fully SEO-optimized and free to use.",
     url: "https://calchub.adilhusain.xyz",
     siteName: "CalcHub",
     type: "website",
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "CalcHub - Free Embeddable Calculators",
+        alt: "CalcHub - Free Calculators",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CalcHub - Free Embeddable Calculators",
+    title: "CalcHub - Free Calculators",
     description:
-      "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+      "A library of niche calculators for all your needs. Fully SEO-optimized and free to use.",
     images: ["/og.png"],
   },
   icons: {
