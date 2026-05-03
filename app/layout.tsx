@@ -3,17 +3,16 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" });
-
-export const metadataBase = new URL("https://calchub.adilhusain.xyz");
+const siteUrl = process.env.NEXT_APP_URL ?? "https://calchub.adilhusain.xyz";
 
 export const metadata: Metadata = {
   title: "CalcHub - Free Calculators",
   description:
     "A library of niche calculators for all your needs. Fully SEO-optimized and free to use.",
-  metadataBase,
+  metadataBase: new URL(siteUrl),
   applicationName: "CalcHub",
   generator: "Next.js",
-  authors: [{ name: "CalcHub", url: "https://calchub.adilhusain.xyz" }],
+  authors: [{ name: "CalcHub", url: siteUrl }],
   creator: "CalcHub",
   publisher: "CalcHub",
   keywords: [
@@ -39,8 +38,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CalcHub - Free Calculators",
     description:
-      "A library of niche calculators for all your needs. Fully SEO-optimized and free to use.",
-    url: "https://calchub.adilhusain.xyz",
+      "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
+    url: siteUrl,
     siteName: "CalcHub",
     type: "website",
     images: [
