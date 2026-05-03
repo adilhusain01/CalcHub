@@ -267,5 +267,14 @@ export const calculatorsList: CalculatorMeta[] = [
   { slug: 'alien-age', title: 'Alien Age', description: 'Discover your age in different parts of the solar system.', category: 'Fun', iconName: 'Rocket' },
   { slug: 'download-time', title: 'Download Time', description: 'Estimate how long a large file will take to download.', category: 'Tools', iconName: 'Download' },
   { slug: 'caffeine-crash', title: 'Caffeine Crash', description: 'Find out when the coffee jitters will wear off and sleep can begin.', category: 'Health', iconName: 'Coffee' },
-  { slug: 'mocking-case', title: 'Mocking Case', description: 'cOnVeRt TeXt To MoCkInG cAsE.', category: 'Fun', iconName: 'MessageSquare' }
+  { slug: 'mocking-case', title: 'Mocking Case', description: 'cOnVeRt TeXt To MoCkInG cAsE.', category: 'Fun', iconName: 'MessageSquare' },
+  // --- Round 2 New Calculators ---
+  { slug: 'microwave-converter', title: 'Microwave Converter', description: 'Fix instructions meant for a different microwave wattage.', category: 'Everyday', iconName: 'ChefHat' },
+  { slug: 'cost-per-wear', title: 'Cost Per Wear', description: 'Justify expensive clothing purchases using girl math.', category: 'Finance', iconName: 'ShoppingBag' },
+  { slug: 'reading-time', title: 'Reading Planner', description: 'Find out how many pages a day you need to read.', category: 'Everyday', iconName: 'BookOpen' },
+  { slug: 'lottery-odds', title: 'Lottery Dream Crusher', description: 'Calculate your exact odds of winning the jackpot.', category: 'Fun', iconName: 'TrendingDown' },
+  { slug: 'bac', title: 'Blood Alcohol (BAC)', description: 'Estimate your Blood Alcohol Concentration.', category: 'Health', iconName: 'Beer' },
+  { slug: 'engagement-rate', title: 'Engagement Rate', description: 'Calculate engagement % for Instagram, TikTok, or Twitter.', category: 'Business', iconName: 'Heart' },
+  { slug: 'cat-years', title: 'Cat Years Converter', description: 'Find out exactly how old your feline overlord is.', category: 'Fun', iconName: 'Cat' },
+  { slug: 'wpm', title: 'WPM Calculator', description: 'Calculate your true Typing Words Per Minute.', category: 'Tools', iconName: 'Keyboard' }
 ];

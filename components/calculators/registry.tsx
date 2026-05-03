@@ -82,6 +82,14 @@ import { AlienAgeCalculator } from '@/components/calculators/AlienAgeCalculator'
 import { DownloadTimeCalculator } from '@/components/calculators/DownloadTimeCalculator';
 import { CaffeineCrashCalculator } from '@/components/calculators/CaffeineCrashCalculator';
 import { MockingCaseConverter } from '@/components/calculators/MockingCaseConverter';
+import { MicrowaveConverter } from '@/components/calculators/MicrowaveConverter';
+import { CostPerWearCalculator } from '@/components/calculators/CostPerWearCalculator';
+import { ReadingTimeCalculator } from '@/components/calculators/ReadingTimeCalculator';
+import { LotteryOddsCalculator } from '@/components/calculators/LotteryOddsCalculator';
+import { BacCalculator } from '@/components/calculators/BacCalculator';
+import { EngagementRateCalculator } from '@/components/calculators/EngagementRateCalculator';
+import { CatYearsCalculator } from '@/components/calculators/CatYearsCalculator';
+import { WpmCalculator } from '@/components/calculators/WpmCalculator';
 export function getCalculatorComponent(slug: string) {
   switch (slug) {
     case 'emi': return <EmiCalculator />;
@@ -166,6 +174,14 @@ export function getCalculatorComponent(slug: string) {
     case 'download-time': return <DownloadTimeCalculator />;
     case 'caffeine-crash': return <CaffeineCrashCalculator />;
     case 'mocking-case': return <MockingCaseConverter />;
+    case 'microwave-converter': return <MicrowaveConverter />;
+    case 'cost-per-wear': return <CostPerWearCalculator />;
+    case 'reading-time': return <ReadingTimeCalculator />;
+    case 'lottery-odds': return <LotteryOddsCalculator />;
+    case 'bac': return <BacCalculator />;
+    case 'engagement-rate': return <EngagementRateCalculator />;
+    case 'cat-years': return <CatYearsCalculator />;
+    case 'wpm': return <WpmCalculator />;
     default: return <div className="p-8 text-center text-xl font-bold bg-white border-[3px] border-black rounded-[24px]">Calculator under construction.</div>;
   }
 }
