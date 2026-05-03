@@ -1,190 +1,318 @@
-import { CalculatorMeta, calculatorsList } from '@/lib/calculators';
-import { EmiCalculator } from '@/components/calculators/EmiCalculator';
-import { TipSplitCalculator } from '@/components/calculators/TipSplitCalculator';
-import { GstCalculator } from '@/components/calculators/GstCalculator';
-import { FreelanceRateCalculator } from '@/components/calculators/FreelanceRateCalculator';
-import { CalorieDeficitCalculator } from '@/components/calculators/CalorieDeficitCalculator';
-import { LeaseVsBuyCalculator } from '@/components/calculators/LeaseVsBuyCalculator';
-import { ROICalculator } from '@/components/calculators/ROICalculator';
-import { CompoundInterestCalculator } from '@/components/calculators/CompoundInterestCalculator';
-import { BMICalculator } from '@/components/calculators/BMICalculator';
-import { DiscountCalculator } from '@/components/calculators/DiscountCalculator';
-import { ProfitMarginCalculator } from '@/components/calculators/ProfitMarginCalculator';
-import { PercentageCalculator } from '@/components/calculators/PercentageCalculator';
-import { RuleOf72Calculator } from '@/components/calculators/RuleOf72Calculator';
-import { SalaryToHourlyCalculator } from '@/components/calculators/SalaryToHourlyCalculator';
-import { PomodoroTimer } from '@/components/calculators/PomodoroTimer';
-import { LoanPayoffCalculator } from '@/components/calculators/LoanPayoffCalculator';
-import { WaterIntakeCalculator } from '@/components/calculators/WaterIntakeCalculator';
-import { SalesTaxCalculator } from '@/components/calculators/SalesTaxCalculator';
-import { WordCountCalculator } from '@/components/calculators/WordCountCalculator';
-import { TimeDurationCalculator } from '@/components/calculators/TimeDurationCalculator';
-import { FuelCostCalculator } from '@/components/calculators/FuelCostCalculator';
-import { AgeCalculator } from '@/components/calculators/AgeCalculator';
-import { RandomNumberGenerator } from '@/components/calculators/RandomNumberGenerator';
-import { PasswordGenerator } from '@/components/calculators/PasswordGenerator';
-import { TextCaseConverter } from '@/components/calculators/TextCaseConverter';
-import { AspectRatioCalculator } from '@/components/calculators/AspectRatioCalculator';
-import { ColorConverter } from '@/components/calculators/ColorConverter';
-import { DaysBetweenCalculator } from '@/components/calculators/DaysBetweenCalculator';
+import { CalculatorMeta, calculatorsList } from "@/lib/calculators";
+import { EmiCalculator } from "@/components/calculators/EmiCalculator";
+import { TipSplitCalculator } from "@/components/calculators/TipSplitCalculator";
+import { GstCalculator } from "@/components/calculators/GstCalculator";
+import { FreelanceRateCalculator } from "@/components/calculators/FreelanceRateCalculator";
+import { CalorieDeficitCalculator } from "@/components/calculators/CalorieDeficitCalculator";
+import { LeaseVsBuyCalculator } from "@/components/calculators/LeaseVsBuyCalculator";
+import { ROICalculator } from "@/components/calculators/ROICalculator";
+import { CompoundInterestCalculator } from "@/components/calculators/CompoundInterestCalculator";
+import { BMICalculator } from "@/components/calculators/BMICalculator";
+import { DiscountCalculator } from "@/components/calculators/DiscountCalculator";
+import { ProfitMarginCalculator } from "@/components/calculators/ProfitMarginCalculator";
+import { PercentageCalculator } from "@/components/calculators/PercentageCalculator";
+import { RuleOf72Calculator } from "@/components/calculators/RuleOf72Calculator";
+import { SalaryToHourlyCalculator } from "@/components/calculators/SalaryToHourlyCalculator";
+import { PomodoroTimer } from "@/components/calculators/PomodoroTimer";
+import { LoanPayoffCalculator } from "@/components/calculators/LoanPayoffCalculator";
+import { WaterIntakeCalculator } from "@/components/calculators/WaterIntakeCalculator";
+import { SalesTaxCalculator } from "@/components/calculators/SalesTaxCalculator";
+import { WordCountCalculator } from "@/components/calculators/WordCountCalculator";
+import { TimeDurationCalculator } from "@/components/calculators/TimeDurationCalculator";
+import { FuelCostCalculator } from "@/components/calculators/FuelCostCalculator";
+import { AgeCalculator } from "@/components/calculators/AgeCalculator";
+import { RandomNumberGenerator } from "@/components/calculators/RandomNumberGenerator";
+import { PasswordGenerator } from "@/components/calculators/PasswordGenerator";
+import { TextCaseConverter } from "@/components/calculators/TextCaseConverter";
+import { AspectRatioCalculator } from "@/components/calculators/AspectRatioCalculator";
+import { ColorConverter } from "@/components/calculators/ColorConverter";
+import { DaysBetweenCalculator } from "@/components/calculators/DaysBetweenCalculator";
 
-import { InflationCalculator } from '@/components/calculators/InflationCalculator';
-import { CurrencyConverter } from '@/components/calculators/CurrencyConverter';
-import { CryptoProfitCalculator } from '@/components/calculators/CryptoProfitCalculator';
-import { RetirementSavingsCalculator } from '@/components/calculators/RetirementSavingsCalculator';
-import { MortgagePayoffCalculator } from '@/components/calculators/MortgagePayoffCalculator';
-import { DebtSnowballCalculator } from '@/components/calculators/DebtSnowballCalculator';
-import { BudgetPlannerCalculator } from '@/components/calculators/BudgetPlannerCalculator';
-import { NetWorthCalculator } from '@/components/calculators/NetWorthCalculator';
-import { MacroCalculator } from '@/components/calculators/MacroCalculator';
-import { BmrCalculator } from '@/components/calculators/BmrCalculator';
-import { PregnancyDueDateCalculator } from '@/components/calculators/PregnancyDueDateCalculator';
-import { SleepCycleCalculator } from '@/components/calculators/SleepCycleCalculator';
-import { TargetHeartRateCalculator } from '@/components/calculators/TargetHeartRateCalculator';
-import { BodyFatCalculator } from '@/components/calculators/BodyFatCalculator';
-import { StartupRunwayCalculator } from '@/components/calculators/StartupRunwayCalculator';
-import { BreakEvenCalculator } from '@/components/calculators/BreakEvenCalculator';
-import { CustomerLtvCalculator } from '@/components/calculators/CustomerLtvCalculator';
-import { MarkupCalculator } from '@/components/calculators/MarkupCalculator';
-import { PaypalFeeCalculator } from '@/components/calculators/PaypalFeeCalculator';
-import { StripeFeeCalculator } from '@/components/calculators/StripeFeeCalculator';
-import { CpmCalculator } from '@/components/calculators/CpmCalculator';
-import { FractionToDecimalCalculator } from '@/components/calculators/FractionToDecimalCalculator';
-import { SquareRootCalculator } from '@/components/calculators/SquareRootCalculator';
-import { ScientificCalculator } from '@/components/calculators/ScientificCalculator';
-import { AreaCalculator } from '@/components/calculators/AreaCalculator';
-import { VolumeCalculator } from '@/components/calculators/VolumeCalculator';
-import { GcdLcmCalculator } from '@/components/calculators/GcdLcmCalculator';
-import { PrimeNumberCalculator } from '@/components/calculators/PrimeNumberCalculator';
-import { FibonacciCalculator } from '@/components/calculators/FibonacciCalculator';
-import { LoremIpsumCalculator } from '@/components/calculators/LoremIpsumCalculator';
-import { JsonFormatter } from '@/components/calculators/JsonFormatter';
-import { Base64Calculator } from '@/components/calculators/Base64Calculator';
-import { HashGenerator } from '@/components/calculators/HashGenerator';
-import { UuidCalculator } from '@/components/calculators/UuidCalculator';
-import { QrCodeCalculator } from '@/components/calculators/QrCodeCalculator';
-import { Stopwatch } from '@/components/calculators/Stopwatch';
-import { DiffChecker } from '@/components/calculators/DiffChecker';
-import { RegexTester } from '@/components/calculators/RegexTester';
-import { DogYearsCalculator } from '@/components/calculators/DogYearsCalculator';
-import { ZodiacCalculator } from '@/components/calculators/ZodiacCalculator';
-import { LoveCalculator } from '@/components/calculators/LoveCalculator';
-import { TimeZoneCalculator } from '@/components/calculators/TimeZoneCalculator';
-import { UnitConverter } from '@/components/calculators/UnitConverter';
-import { LeapYearCalculator } from '@/components/calculators/LeapYearCalculator';
-import { Calculator060 } from '@/components/calculators/060Calculator';
-import { HorsepowerCalculator } from '@/components/calculators/HorsepowerCalculator';
-import { TireSizeCalculator } from '@/components/calculators/TireSizeCalculator';
-import { EvChargingCalculator } from '@/components/calculators/EvChargingCalculator';
-import { PizzaValueCalculator } from '@/components/calculators/PizzaValueCalculator';
-import { BingeWatchCalculator } from '@/components/calculators/BingeWatchCalculator';
-import { AlienAgeCalculator } from '@/components/calculators/AlienAgeCalculator';
-import { DownloadTimeCalculator } from '@/components/calculators/DownloadTimeCalculator';
-import { CaffeineCrashCalculator } from '@/components/calculators/CaffeineCrashCalculator';
-import { MockingCaseConverter } from '@/components/calculators/MockingCaseConverter';
-import { MicrowaveConverter } from '@/components/calculators/MicrowaveConverter';
-import { CostPerWearCalculator } from '@/components/calculators/CostPerWearCalculator';
-import { ReadingTimeCalculator } from '@/components/calculators/ReadingTimeCalculator';
-import { LotteryOddsCalculator } from '@/components/calculators/LotteryOddsCalculator';
-import { BacCalculator } from '@/components/calculators/BacCalculator';
-import { EngagementRateCalculator } from '@/components/calculators/EngagementRateCalculator';
-import { CatYearsCalculator } from '@/components/calculators/CatYearsCalculator';
-import { WpmCalculator } from '@/components/calculators/WpmCalculator';
+import { InflationCalculator } from "@/components/calculators/InflationCalculator";
+import { CurrencyConverter } from "@/components/calculators/CurrencyConverter";
+import { CryptoProfitCalculator } from "@/components/calculators/CryptoProfitCalculator";
+import { RetirementSavingsCalculator } from "@/components/calculators/RetirementSavingsCalculator";
+import { MortgagePayoffCalculator } from "@/components/calculators/MortgagePayoffCalculator";
+import { DebtSnowballCalculator } from "@/components/calculators/DebtSnowballCalculator";
+import { BudgetPlannerCalculator } from "@/components/calculators/BudgetPlannerCalculator";
+import { NetWorthCalculator } from "@/components/calculators/NetWorthCalculator";
+import { MacroCalculator } from "@/components/calculators/MacroCalculator";
+import { BmrCalculator } from "@/components/calculators/BmrCalculator";
+import { PregnancyDueDateCalculator } from "@/components/calculators/PregnancyDueDateCalculator";
+import { SleepCycleCalculator } from "@/components/calculators/SleepCycleCalculator";
+import { TargetHeartRateCalculator } from "@/components/calculators/TargetHeartRateCalculator";
+import { BodyFatCalculator } from "@/components/calculators/BodyFatCalculator";
+import { StartupRunwayCalculator } from "@/components/calculators/StartupRunwayCalculator";
+import { BreakEvenCalculator } from "@/components/calculators/BreakEvenCalculator";
+import { CustomerLtvCalculator } from "@/components/calculators/CustomerLtvCalculator";
+import { MarkupCalculator } from "@/components/calculators/MarkupCalculator";
+import { PaypalFeeCalculator } from "@/components/calculators/PaypalFeeCalculator";
+import { StripeFeeCalculator } from "@/components/calculators/StripeFeeCalculator";
+import { CpmCalculator } from "@/components/calculators/CpmCalculator";
+import { FractionToDecimalCalculator } from "@/components/calculators/FractionToDecimalCalculator";
+import { SquareRootCalculator } from "@/components/calculators/SquareRootCalculator";
+import { ScientificCalculator } from "@/components/calculators/ScientificCalculator";
+import { AreaCalculator } from "@/components/calculators/AreaCalculator";
+import { VolumeCalculator } from "@/components/calculators/VolumeCalculator";
+import { GcdLcmCalculator } from "@/components/calculators/GcdLcmCalculator";
+import { PrimeNumberCalculator } from "@/components/calculators/PrimeNumberCalculator";
+import { FibonacciCalculator } from "@/components/calculators/FibonacciCalculator";
+import { LoremIpsumCalculator } from "@/components/calculators/LoremIpsumCalculator";
+import { JsonFormatter } from "@/components/calculators/JsonFormatter";
+import { Base64Calculator } from "@/components/calculators/Base64Calculator";
+import { HashGenerator } from "@/components/calculators/HashGenerator";
+import { UuidCalculator } from "@/components/calculators/UuidCalculator";
+import { QrCodeCalculator } from "@/components/calculators/QrCodeCalculator";
+import { Stopwatch } from "@/components/calculators/Stopwatch";
+import { DiffChecker } from "@/components/calculators/DiffChecker";
+import { RegexTester } from "@/components/calculators/RegexTester";
+import { DogYearsCalculator } from "@/components/calculators/DogYearsCalculator";
+import { ZodiacCalculator } from "@/components/calculators/ZodiacCalculator";
+import { LoveCalculator } from "@/components/calculators/LoveCalculator";
+import { TimeZoneCalculator } from "@/components/calculators/TimeZoneCalculator";
+import { UnitConverter } from "@/components/calculators/UnitConverter";
+import { LeapYearCalculator } from "@/components/calculators/LeapYearCalculator";
+import { Calculator060 } from "@/components/calculators/060Calculator";
+import { HorsepowerCalculator } from "@/components/calculators/HorsepowerCalculator";
+import { TireSizeCalculator } from "@/components/calculators/TireSizeCalculator";
+import { EvChargingCalculator } from "@/components/calculators/EvChargingCalculator";
+import { PizzaValueCalculator } from "@/components/calculators/PizzaValueCalculator";
+import { BingeWatchCalculator } from "@/components/calculators/BingeWatchCalculator";
+import { AlienAgeCalculator } from "@/components/calculators/AlienAgeCalculator";
+import { DownloadTimeCalculator } from "@/components/calculators/DownloadTimeCalculator";
+import { CaffeineCrashCalculator } from "@/components/calculators/CaffeineCrashCalculator";
+import { MockingCaseConverter } from "@/components/calculators/MockingCaseConverter";
+import { MicrowaveConverter } from "@/components/calculators/MicrowaveConverter";
+import { CostPerWearCalculator } from "@/components/calculators/CostPerWearCalculator";
+import { ReadingTimeCalculator } from "@/components/calculators/ReadingTimeCalculator";
+import { LotteryOddsCalculator } from "@/components/calculators/LotteryOddsCalculator";
+import { BacCalculator } from "@/components/calculators/BacCalculator";
+import { EmergencyFundCalculator } from "@/components/calculators/EmergencyFundCalculator";
+import { TaxRefundCalculator } from "@/components/calculators/TaxRefundCalculator";
+import { InvestmentFeeCalculator } from "@/components/calculators/InvestmentFeeCalculator";
+import { InventoryTurnoverCalculator } from "@/components/calculators/InventoryTurnoverCalculator";
+import { ChurnRateCalculator } from "@/components/calculators/ChurnRateCalculator";
+import { WaistHipRatioCalculator } from "@/components/calculators/WaistHipRatioCalculator";
+import { RunPaceCalculator } from "@/components/calculators/RunPaceCalculator";
+import { BirthdayParadoxCalculator } from "@/components/calculators/BirthdayParadoxCalculator";
+import { MovieMarathonCalculator } from "@/components/calculators/MovieMarathonCalculator";
+import { EmojiTranslator } from "@/components/calculators/EmojiTranslator";
+import { GroceryPriceComparer } from "@/components/calculators/GroceryPriceComparer";
+import { SubscriptionSavingsCalculator } from "@/components/calculators/SubscriptionSavingsCalculator";
+import { EngagementRateCalculator } from "@/components/calculators/EngagementRateCalculator";
+import { CatYearsCalculator } from "@/components/calculators/CatYearsCalculator";
+import { WpmCalculator } from "@/components/calculators/WpmCalculator";
 export function getCalculatorComponent(slug: string) {
   switch (slug) {
-    case 'emi': return <EmiCalculator />;
-    case 'tip-split': return <TipSplitCalculator />;
-    case 'gst': return <GstCalculator />;
-    case 'freelance-rate': return <FreelanceRateCalculator />;
-    case 'calorie-deficit': return <CalorieDeficitCalculator />;
-    case 'lease-vs-buy': return <LeaseVsBuyCalculator />;
-    case 'roi': return <ROICalculator />;
-    case 'compound-interest': return <CompoundInterestCalculator />;
-    case 'bmi': return <BMICalculator />;
-    case 'discount': return <DiscountCalculator />;
-    case 'margin': return <ProfitMarginCalculator />;
-    case 'percentage': return <PercentageCalculator />;
-    case 'rule-of-72': return <RuleOf72Calculator />;
-    case 'salary-to-hourly': return <SalaryToHourlyCalculator />;
-    case 'pomodoro': return <PomodoroTimer />;
-    case 'loan-payoff': return <LoanPayoffCalculator />;
-    case 'water-intake': return <WaterIntakeCalculator />;
-    case 'sales-tax': return <SalesTaxCalculator />;
-    case 'word-count': return <WordCountCalculator />;
-    case 'time-duration': return <TimeDurationCalculator />;
-    case 'fuel-cost': return <FuelCostCalculator />;
-    case 'age': return <AgeCalculator />;
-    case 'random-number': return <RandomNumberGenerator />;
-    case 'password': return <PasswordGenerator />;
-    case 'text-case': return <TextCaseConverter />;
-    case 'aspect-ratio': return <AspectRatioCalculator />;
-    case 'hex-to-rgb': return <ColorConverter />;
-    case 'days-between': return <DaysBetweenCalculator />;
-    case 'inflation': return <InflationCalculator />;
-    case 'currency-converter': return <CurrencyConverter />;
-    case 'crypto-profit': return <CryptoProfitCalculator />;
-    case 'retirement-savings': return <RetirementSavingsCalculator />;
-    case 'mortgage-payoff': return <MortgagePayoffCalculator />;
-    case 'debt-snowball': return <DebtSnowballCalculator />;
-    case 'budget-planner': return <BudgetPlannerCalculator />;
-    case 'net-worth': return <NetWorthCalculator />;
-    case 'macro-calculator': return <MacroCalculator />;
-    case 'bmr': return <BmrCalculator />;
-    case 'pregnancy-due-date': return <PregnancyDueDateCalculator />;
-    case 'sleep-cycle': return <SleepCycleCalculator />;
-    case 'target-heart-rate': return <TargetHeartRateCalculator />;
-    case 'body-fat': return <BodyFatCalculator />;
-    case 'startup-runway': return <StartupRunwayCalculator />;
-    case 'break-even': return <BreakEvenCalculator />;
-    case 'customer-ltv': return <CustomerLtvCalculator />;
-    case 'markup': return <MarkupCalculator />;
-    case 'paypal-fee': return <PaypalFeeCalculator />;
-    case 'stripe-fee': return <StripeFeeCalculator />;
-    case 'cpm': return <CpmCalculator />;
-    case 'fraction-to-decimal': return <FractionToDecimalCalculator />;
-    case 'square-root': return <SquareRootCalculator />;
-    case 'scientific': return <ScientificCalculator />;
-    case 'area': return <AreaCalculator />;
-    case 'volume': return <VolumeCalculator />;
-    case 'gcd-lcm': return <GcdLcmCalculator />;
-    case 'prime-number': return <PrimeNumberCalculator />;
-    case 'fibonacci': return <FibonacciCalculator />;
-    case 'lorem-ipsum': return <LoremIpsumCalculator />;
-    case 'json-formatter': return <JsonFormatter />;
-    case 'base64': return <Base64Calculator />;
-    case 'hash-generator': return <HashGenerator />;
-    case 'uuid': return <UuidCalculator />;
-    case 'qr-code': return <QrCodeCalculator />;
-    case 'stopwatch': return <Stopwatch />;
-    case 'diff-checker': return <DiffChecker />;
-    case 'regex-tester': return <RegexTester />;
-    case 'dog-years': return <DogYearsCalculator />;
-    case 'zodiac': return <ZodiacCalculator />;
-    case 'love-calculator': return <LoveCalculator />;
-    case 'time-zone': return <TimeZoneCalculator />;
-    case 'unit-converter': return <UnitConverter />;
-    case 'leap-year': return <LeapYearCalculator />;
-    case '0-60': return <Calculator060 />;
-    case 'horsepower': return <HorsepowerCalculator />;
-    case 'tire-size': return <TireSizeCalculator />;
-    case 'ev-charging': return <EvChargingCalculator />;
-    case 'pizza-value': return <PizzaValueCalculator />;
-    case 'binge-watch': return <BingeWatchCalculator />;
-    case 'alien-age': return <AlienAgeCalculator />;
-    case 'download-time': return <DownloadTimeCalculator />;
-    case 'caffeine-crash': return <CaffeineCrashCalculator />;
-    case 'mocking-case': return <MockingCaseConverter />;
-    case 'microwave-converter': return <MicrowaveConverter />;
-    case 'cost-per-wear': return <CostPerWearCalculator />;
-    case 'reading-time': return <ReadingTimeCalculator />;
-    case 'lottery-odds': return <LotteryOddsCalculator />;
-    case 'bac': return <BacCalculator />;
-    case 'engagement-rate': return <EngagementRateCalculator />;
-    case 'cat-years': return <CatYearsCalculator />;
-    case 'wpm': return <WpmCalculator />;
-    default: return <div className="p-8 text-center text-xl font-bold bg-white border-[3px] border-black rounded-[24px]">Calculator under construction.</div>;
+    case "emi":
+      return <EmiCalculator />;
+    case "tip-split":
+      return <TipSplitCalculator />;
+    case "gst":
+      return <GstCalculator />;
+    case "freelance-rate":
+      return <FreelanceRateCalculator />;
+    case "calorie-deficit":
+      return <CalorieDeficitCalculator />;
+    case "lease-vs-buy":
+      return <LeaseVsBuyCalculator />;
+    case "roi":
+      return <ROICalculator />;
+    case "compound-interest":
+      return <CompoundInterestCalculator />;
+    case "bmi":
+      return <BMICalculator />;
+    case "discount":
+      return <DiscountCalculator />;
+    case "margin":
+      return <ProfitMarginCalculator />;
+    case "percentage":
+      return <PercentageCalculator />;
+    case "rule-of-72":
+      return <RuleOf72Calculator />;
+    case "salary-to-hourly":
+      return <SalaryToHourlyCalculator />;
+    case "pomodoro":
+      return <PomodoroTimer />;
+    case "loan-payoff":
+      return <LoanPayoffCalculator />;
+    case "water-intake":
+      return <WaterIntakeCalculator />;
+    case "sales-tax":
+      return <SalesTaxCalculator />;
+    case "word-count":
+      return <WordCountCalculator />;
+    case "time-duration":
+      return <TimeDurationCalculator />;
+    case "fuel-cost":
+      return <FuelCostCalculator />;
+    case "age":
+      return <AgeCalculator />;
+    case "random-number":
+      return <RandomNumberGenerator />;
+    case "password":
+      return <PasswordGenerator />;
+    case "text-case":
+      return <TextCaseConverter />;
+    case "aspect-ratio":
+      return <AspectRatioCalculator />;
+    case "hex-to-rgb":
+      return <ColorConverter />;
+    case "days-between":
+      return <DaysBetweenCalculator />;
+    case "inflation":
+      return <InflationCalculator />;
+    case "currency-converter":
+      return <CurrencyConverter />;
+    case "crypto-profit":
+      return <CryptoProfitCalculator />;
+    case "retirement-savings":
+      return <RetirementSavingsCalculator />;
+    case "mortgage-payoff":
+      return <MortgagePayoffCalculator />;
+    case "debt-snowball":
+      return <DebtSnowballCalculator />;
+    case "budget-planner":
+      return <BudgetPlannerCalculator />;
+    case "net-worth":
+      return <NetWorthCalculator />;
+    case "macro-calculator":
+      return <MacroCalculator />;
+    case "bmr":
+      return <BmrCalculator />;
+    case "pregnancy-due-date":
+      return <PregnancyDueDateCalculator />;
+    case "sleep-cycle":
+      return <SleepCycleCalculator />;
+    case "target-heart-rate":
+      return <TargetHeartRateCalculator />;
+    case "body-fat":
+      return <BodyFatCalculator />;
+    case "startup-runway":
+      return <StartupRunwayCalculator />;
+    case "break-even":
+      return <BreakEvenCalculator />;
+    case "customer-ltv":
+      return <CustomerLtvCalculator />;
+    case "markup":
+      return <MarkupCalculator />;
+    case "paypal-fee":
+      return <PaypalFeeCalculator />;
+    case "stripe-fee":
+      return <StripeFeeCalculator />;
+    case "cpm":
+      return <CpmCalculator />;
+    case "fraction-to-decimal":
+      return <FractionToDecimalCalculator />;
+    case "square-root":
+      return <SquareRootCalculator />;
+    case "scientific":
+      return <ScientificCalculator />;
+    case "area":
+      return <AreaCalculator />;
+    case "volume":
+      return <VolumeCalculator />;
+    case "gcd-lcm":
+      return <GcdLcmCalculator />;
+    case "prime-number":
+      return <PrimeNumberCalculator />;
+    case "fibonacci":
+      return <FibonacciCalculator />;
+    case "lorem-ipsum":
+      return <LoremIpsumCalculator />;
+    case "json-formatter":
+      return <JsonFormatter />;
+    case "base64":
+      return <Base64Calculator />;
+    case "hash-generator":
+      return <HashGenerator />;
+    case "uuid":
+      return <UuidCalculator />;
+    case "qr-code":
+      return <QrCodeCalculator />;
+    case "stopwatch":
+      return <Stopwatch />;
+    case "diff-checker":
+      return <DiffChecker />;
+    case "regex-tester":
+      return <RegexTester />;
+    case "dog-years":
+      return <DogYearsCalculator />;
+    case "zodiac":
+      return <ZodiacCalculator />;
+    case "love-calculator":
+      return <LoveCalculator />;
+    case "time-zone":
+      return <TimeZoneCalculator />;
+    case "unit-converter":
+      return <UnitConverter />;
+    case "leap-year":
+      return <LeapYearCalculator />;
+    case "0-60":
+      return <Calculator060 />;
+    case "horsepower":
+      return <HorsepowerCalculator />;
+    case "tire-size":
+      return <TireSizeCalculator />;
+    case "ev-charging":
+      return <EvChargingCalculator />;
+    case "pizza-value":
+      return <PizzaValueCalculator />;
+    case "binge-watch":
+      return <BingeWatchCalculator />;
+    case "alien-age":
+      return <AlienAgeCalculator />;
+    case "download-time":
+      return <DownloadTimeCalculator />;
+    case "caffeine-crash":
+      return <CaffeineCrashCalculator />;
+    case "mocking-case":
+      return <MockingCaseConverter />;
+    case "microwave-converter":
+      return <MicrowaveConverter />;
+    case "cost-per-wear":
+      return <CostPerWearCalculator />;
+    case "reading-time":
+      return <ReadingTimeCalculator />;
+    case "lottery-odds":
+      return <LotteryOddsCalculator />;
+    case "bac":
+      return <BacCalculator />;
+    case "emergency-fund":
+      return <EmergencyFundCalculator />;
+    case "tax-refund":
+      return <TaxRefundCalculator />;
+    case "investment-fee":
+      return <InvestmentFeeCalculator />;
+    case "inventory-turnover":
+      return <InventoryTurnoverCalculator />;
+    case "churn-rate":
+      return <ChurnRateCalculator />;
+    case "waist-hip-ratio":
+      return <WaistHipRatioCalculator />;
+    case "run-pace":
+      return <RunPaceCalculator />;
+    case "birthday-paradox":
+      return <BirthdayParadoxCalculator />;
+    case "movie-marathon":
+      return <MovieMarathonCalculator />;
+    case "emoji-translator":
+      return <EmojiTranslator />;
+    case "grocery-price-compare":
+      return <GroceryPriceComparer />;
+    case "subscription-savings":
+      return <SubscriptionSavingsCalculator />;
+    case "engagement-rate":
+      return <EngagementRateCalculator />;
+    case "cat-years":
+      return <CatYearsCalculator />;
+    case "wpm":
+      return <WpmCalculator />;
+    default:
+      return (
+        <div className="p-8 text-center text-xl font-bold bg-white border-[3px] border-black rounded-[24px]">
+          Calculator under construction.
+        </div>
+      );
   }
 }
-
-
-
