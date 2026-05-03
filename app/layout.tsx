@@ -11,6 +11,31 @@ export const metadata: Metadata = {
   description:
     "A library of niche, embeddable calculators for all your needs. Fully SEO-optimized and free to use.",
   metadataBase,
+  applicationName: "CalcHub",
+  generator: "Next.js",
+  authors: [{ name: "CalcHub", url: "https://calchub.adilhusain.xyz" }],
+  creator: "CalcHub",
+  publisher: "CalcHub",
+  keywords: [
+    "embeddable calculators",
+    "free calculators",
+    "finance calculator",
+    "health calculator",
+    "productivity tools",
+    "calculator library",
+    "online calculators",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "CalcHub - Free Embeddable Calculators",
     description:
@@ -37,6 +62,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/logo.png",
   },
 };

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://calchub.adilhusain.xyz/sitemap.xml
+Host: calchub.adilhusain.xyz

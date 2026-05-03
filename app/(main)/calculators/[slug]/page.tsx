@@ -13,9 +13,43 @@ export async function generateMetadata({
   const calc = calculatorsList.find((c) => c.slug === slug);
   if (!calc) return { title: "Not Found" };
 
+  const canonicalUrl = new URL(
+    `/calculators/${calc.slug}`,
+    "https://calchub.adilhusain.xyz",
+  );
+
   return {
     title: `${calc.title} | CalcHub`,
     description: calc.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${calc.title} | CalcHub`,
+      description: calc.description,
+      url: canonicalUrl.toString(),
+      siteName: "CalcHub",
+      type: "website",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: `${calc.title} | CalcHub`,
+          type: "image/png",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${calc.title} | CalcHub`,
+      description: calc.description,
+      images: ["/og.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

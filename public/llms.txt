@@ -1,0 +1,8 @@
+# llms.txt for CalcHub
+# Machine-readable site metadata for language model discovery and usage.
+site: https://calchub.adilhusain.xyz
+name: CalcHub
+description: Free embeddable calculators for finance, health, business, and everyday use.
+author: Adil Husain
+sitemap: https://calchub.adilhusain.xyz/sitemap.xml
+robots: https://calchub.adilhusain.xyz/robots.txt
