@@ -2,7 +2,7 @@ import { calculatorsList } from "@/lib/calculators";
 import { getCalculatorComponent } from "@/components/calculators/registry";
 import { notFound } from "next/navigation";
 import { EmbedInstructions } from "@/components/EmbedInstructions";
-import Link from "next/link";
+import { BackButton } from "@/components/BackButton";
 
 export async function generateMetadata({
   params,
@@ -70,37 +70,22 @@ export default async function CalculatorPage({
 
   return (
     <div className="w-full">
-      <Link
-        href="/"
-        className="inline-flex items-center text-sm font-bold text-black hover:underline mb-8 border-[2px] border-black px-4 py-2 rounded-xl bg-white shadow-[2px_2px_0_0_#000] hover:shadow-[4px_4px_0_0_#000] transition-shadow"
-      >
-        &larr; Back to Directory
-      </Link>
-
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        {/* Header Info */}
-        <div className="order-1 lg:col-span-5 flex flex-col pt-4">
-          <div className="inline-flex align-center w-max px-3 py-1 rounded-full text-sm font-extrabold bg-[#4a8eff] text-white border-2 border-black mb-6 uppercase tracking-wider">
-            {calc.category}
-          </div>
-          <h1 className="text-3xl lg:text-5xl font-black tracking-tight text-black mb-6 leading-tight">
-            {calc.title}
-          </h1>
-          <p className="text-lg lg:text-xl font-medium text-gray-800 mb-10 leading-relaxed">
-            {calc.description}
-          </p>
+      <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
+        <BackButton />
+        <div className="inline-flex align-center px-3 py-1 rounded-full text-xs font-extrabold bg-[#4a8eff] text-white border-2 border-black uppercase tracking-wider shadow-[2px_2px_0_0_#000]">
+          {calc.category}
         </div>
+      </div>
 
-        {/* Right Col - The robust component itself */}
-        <div className="order-2 lg:col-span-7 lg:row-span-2 flex justify-center lg:justify-end lg:pt-14">
-          <div className="w-full max-w-lg lg:scale-[1.05] origin-top">
-            {getCalculatorComponent(calc.slug)}
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-6xl mx-auto pb-12">
+        {/* The robust component itself */}
+        <div className="lg:col-span-7 xl:col-span-8 w-full">
+          {getCalculatorComponent(calc.slug)}
         </div>
 
         {/* Embed Instructions */}
-        <div className="order-3 lg:col-span-5">
-          <div className="bg-[#a7e0a5] border-[3px] border-black rounded-[24px] p-6 mb-8 shadow-[4px_4px_0_0_#000]">
+        <div className="lg:col-span-5 xl:col-span-4 w-full sticky top-8">
+          <div className="bg-[#a7e0a5] border-[3px] border-black rounded-[24px] p-6 shadow-[4px_4px_0_0_#000]">
             <h3 className="font-black text-2xl text-black mb-2">
               Embed for Free
             </h3>

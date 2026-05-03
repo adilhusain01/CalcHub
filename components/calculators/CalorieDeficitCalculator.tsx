@@ -33,10 +33,10 @@ export function CalorieDeficitCalculator() {
   const results = calculate();
 
   return (
-    <Card className="w-full bg-white shadow-xl shadow-gray-200/50">
-      <CardHeader className="bg-gray-50/50 border-b border-gray-100">
-        <CardTitle>Calorie Deficit Calculator</CardTitle>
-        <CardDescription>Calculate daily calories to reach your goal.</CardDescription>
+    <Card className="w-full bg-white shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-[3px] border-black rounded-[24px]">
+      <CardHeader className="bg-[#f3e5ca] border-b-[3px] border-black rounded-t-[21px]">
+        <CardTitle className="text-2xl font-black">Calorie Deficit Calculator</CardTitle>
+        <CardDescription className="text-black font-bold">Calculate daily calories to reach your goal.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-4">
         
@@ -81,12 +81,12 @@ export function CalorieDeficitCalculator() {
           <p className="text-xs text-gray-500">500 cal/day â 1lb/week loss</p>
         </div>
 
-        <div className="rounded-xl bg-orange-500 p-6 text-white text-center mt-6 shadow-md">
-          <p className="text-orange-100 text-sm font-medium mb-1">Target Daily Calories</p>
+        <div className="rounded-xl  bg-[#ffd043]  p-6 text-black text-center mt-6  shadow-[4px_4px_0_0_#000] border-[3px] border-black  text-black">
+          <p className="text-black opacity-80 font-bold text-sm font-medium mb-1">Target Daily Calories</p>
           <p className="text-4xl font-bold tracking-tight">
-            {Math.round(results.target)} <span className="text-lg font-normal text-orange-200">kcal</span>
+            {Math.round(results.target)} <span className="text-lg font-normal text-black opacity-80 font-bold">kcal</span>
           </p>
-          <p className="text-sm text-orange-100 mt-2 pt-2 border-t border-orange-400">
+          <p className="text-sm text-black opacity-80 font-bold mt-2 pt-2 border-t border-orange-400">
             Maintenance (TDEE): {Math.round(results.tdee)} kcal
           </p>
         </div>

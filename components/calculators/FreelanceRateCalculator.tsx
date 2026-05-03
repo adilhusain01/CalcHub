@@ -29,10 +29,10 @@ export function FreelanceRateCalculator() {
   const results = calculate();
 
   return (
-    <Card className="w-full bg-white shadow-xl shadow-gray-200/50">
-      <CardHeader className="bg-gray-50/50 border-b border-gray-100">
-        <CardTitle>Freelance Hourly Rate</CardTitle>
-        <CardDescription>Calculate your ideal rate based on revenue goals.</CardDescription>
+    <Card className="w-full bg-white shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-[3px] border-black rounded-[24px]">
+      <CardHeader className="bg-[#f3e5ca] border-b-[3px] border-black rounded-t-[21px]">
+        <CardTitle className="text-2xl font-black">Freelance Hourly Rate</CardTitle>
+        <CardDescription className="text-black font-bold">Calculate your ideal rate based on revenue goals.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-4">
         <div className="space-y-2">
@@ -62,12 +62,12 @@ export function FreelanceRateCalculator() {
           </div>
         </div>
 
-        <div className="rounded-xl bg-gradient-to-br from-indigo-600 to-blue-700 p-6 text-white text-center mt-6 shadow-md">
-          <p className="text-blue-100 text-sm font-medium mb-1">Target Minimum Rate</p>
-          <p className="text-4xl font-bold tracking-tight">
-            ${results.hourlyRate.toFixed(2)}<span className="text-lg font-normal text-blue-200">/hr</span>
+        <div className="rounded-[24px] bg-[#4a8eff] p-6 text-black text-center mt-6 shadow-[4px_4px_0_0_#000] border-[3px] border-black">
+          <p className="text-black font-bold text-sm mb-1">Target Minimum Rate</p>
+          <p className="text-4xl md:text-5xl font-black tracking-tight">
+            ${results.hourlyRate.toFixed(2)}<span className="text-lg font-bold">/hr</span>
           </p>
-          <p className="text-sm text-indigo-200 mt-2">
+          <p className="text-sm font-bold text-black mt-2">
             Based on {results.totalHours} billable hours per year.
           </p>
         </div>

@@ -204,5 +204,61 @@ export const calculatorsList: CalculatorMeta[] = [
     description: 'Find out exactly how many days are between two dates.',
     category: 'Everyday',
     iconName: 'CalendarDays'
-  }
+  },
+  // --- New Additions to Populate the Directory ---
+  // Finance
+  { slug: 'inflation', title: 'Inflation Calculator', description: 'Calculate the true buying power of your money over time.', category: 'Finance', iconName: 'TrendingDown' },
+  { slug: 'currency-converter', title: 'Currency Converter', description: 'Convert between world currencies with live exchange rates.', category: 'Finance', iconName: 'Coins' },
+  { slug: 'crypto-profit', title: 'Crypto Profit', description: 'Determine potential profits or losses from crypto trading.', category: 'Finance', iconName: 'Bitcoin' },
+  { slug: 'retirement-savings', title: 'Retirement Savings', description: 'Estimate how much you need to save for a comfortable retirement.', category: 'Finance', iconName: 'Landmark' },
+  { slug: 'mortgage-payoff', title: 'Mortgage Payoff', description: 'See how extra payments can shorten your mortgage term.', category: 'Finance', iconName: 'Home' },
+  { slug: 'debt-snowball', title: 'Debt Snowball', description: 'Plan your debt payoff using the snowball method.', category: 'Finance', iconName: 'CreditCard' },
+  { slug: 'budget-planner', title: '50/30/20 Budget', description: 'Automatically split your income into needs, wants, and savings.', category: 'Finance', iconName: 'Wallet' },
+  { slug: 'net-worth', title: 'Net Worth', description: 'Calculate your total net worth by balancing assets and liabilities.', category: 'Finance', iconName: 'Scale' },
+  // Health
+  { slug: 'macro-calculator', title: 'Macro Calculator', description: 'Find your ideal daily protein, carb, and fat targets.', category: 'Health', iconName: 'Apple' },
+  { slug: 'bmr', title: 'BMR Calculator', description: 'Calculate your Basal Metabolic Rate (calories burned at rest).', category: 'Health', iconName: 'Activity' },
+  { slug: 'pregnancy-due-date', title: 'Due Date', description: 'Estimate your baby\'s due date based on your last cycle.', category: 'Health', iconName: 'Baby' },
+  { slug: 'sleep-cycle', title: 'Sleep Cycle', description: 'Find the optimal times to go to bed or wake up feeling refreshed.', category: 'Health', iconName: 'Moon' },
+  { slug: 'target-heart-rate', title: 'Target Heart Rate', description: 'Find your ideal heart rate zone for maximum fat burn.', category: 'Health', iconName: 'HeartPulse' },
+  { slug: 'body-fat', title: 'Body Fat %', description: 'Estimate your body fat percentage using standard measurements.', category: 'Health', iconName: 'UserCheck' },
+  // Business
+  { slug: 'startup-runway', title: 'Startup Runway', description: 'Calculate how many months your business can survive before running out of cash.', category: 'Business', iconName: 'Rocket' },
+  { slug: 'break-even', title: 'Break-Even Analysis', description: 'Find the point where your business revenue equals its costs.', category: 'Business', iconName: 'BarChart' },
+  { slug: 'customer-ltv', title: 'Customer LTV', description: 'Calculate the Lifetime Value of your average customer.', category: 'Business', iconName: 'Users' },
+  { slug: 'markup', title: 'Markup Calculator', description: 'Easily find the selling price based on cost and desired markup.', category: 'Business', iconName: 'ArrowUpRight' },
+  { slug: 'paypal-fee', title: 'PayPal Fee', description: 'Calculate exactly how much PayPal will deduct from a transaction.', category: 'Business', iconName: 'CreditCard' },
+  { slug: 'stripe-fee', title: 'Stripe Fee', description: 'Find out Stripe\'s exact cut for domestic and international payments.', category: 'Business', iconName: 'CreditCard' },
+  { slug: 'cpm', title: 'CPM Calculator', description: 'Calculate the Cost Per Mille (thousand impressions) for ad campaigns.', category: 'Business', iconName: 'Megaphone' },
+  // Math
+  { slug: 'fraction-to-decimal', title: 'Fraction to Decimal', description: 'Quickly convert any fraction into a precise decimal number.', category: 'Math', iconName: 'DivideSquare' },
+  { slug: 'square-root', title: 'Square Root', description: 'Find the square root or perfect squares for any number.', category: 'Math', iconName: 'Calculator' },
+  { slug: 'scientific', title: 'Scientific Calculator', description: 'Advanced mathematical functions, trigonometry, and logarithms.', category: 'Math', iconName: 'Binary' },
+  { slug: 'area', title: 'Area Calculator', description: 'Calculate the area for circles, triangles, rectangles, and polygons.', category: 'Math', iconName: 'Square' },
+  { slug: 'volume', title: 'Volume Calculator', description: 'Find the cubic volume of spheres, cylinders, and boxes.', category: 'Math', iconName: 'Box' },
+  { slug: 'gcd-lcm', title: 'GCD & LCM', description: 'Find the Greatest Common Divisor and Least Common Multiple.', category: 'Math', iconName: 'Calculator' },
+  { slug: 'prime-number', title: 'Prime Checker', description: 'Verify if a given number is prime or composite.', category: 'Math', iconName: 'Hash' },
+  { slug: 'fibonacci', title: 'Fibonacci Sequence', description: 'Generate and find numbers in the Fibonacci sequence.', category: 'Math', iconName: 'ListOrdered' },
+  // Tools
+  { slug: 'lorem-ipsum', title: 'Lorem Ipsum Generator', description: 'Generate dummy text for your wireframes and mockups.', category: 'Tools', iconName: 'Type' },
+  { slug: 'json-formatter', title: 'JSON Formatter', description: 'Beautify, validate, and format your JSON data instantly.', category: 'Tools', iconName: 'Code' },
+  { slug: 'base64', title: 'Base64 Encode/Decode', description: 'Convert text or files to and from Base64 format.', category: 'Tools', iconName: 'FileCode' },
+  { slug: 'hash-generator', title: 'Hash Generator', description: 'Generate MD5, SHA-1, or SHA-256 hashes from any text.', category: 'Tools', iconName: 'Lock' },
+  { slug: 'uuid', title: 'UUID Generator', description: 'Generate bulk version 4 UUIDs for your database needs.', category: 'Tools', iconName: 'Fingerprint' },
+  { slug: 'qr-code', title: 'QR Code Generator', description: 'Create dynamic QR codes for URLs, text, and contact info.', category: 'Tools', iconName: 'QrCode' },
+  { slug: 'stopwatch', title: 'Online Stopwatch', description: 'A precise digital stopwatch with lap and split times.', category: 'Tools', iconName: 'Timer' },
+  { slug: 'diff-checker', title: 'Text Diff Checker', description: 'Compare two blocks of text and highlight the differences.', category: 'Tools', iconName: 'FileDiff' },
+  { slug: 'regex-tester', title: 'Regex Tester', description: 'Test and validate your Regular Expressions securely in the browser.', category: 'Tools', iconName: 'Terminal' },
+  // Everyday
+  { slug: 'dog-years', title: 'Dog Age Calculator', description: 'Convert your dog\'s age to human years accurately based on breed size.', category: 'Everyday', iconName: 'Dog' },
+  { slug: 'zodiac', title: 'Zodiac Sign', description: 'Find out your astrological zodiac sign based on your birthday.', category: 'Everyday', iconName: 'Stars' },
+  { slug: 'love-calculator', title: 'Love Calculator', description: 'A fun tool to calculate the compatibility between two names.', category: 'Everyday', iconName: 'Heart' },
+  { slug: 'time-zone', title: 'Time Zone Converter', description: 'Convert times easily across different global time zones.', category: 'Everyday', iconName: 'Globe' },
+  { slug: 'unit-converter', title: 'Unit Converter', description: 'Convert length, weight, temperature, and volume instantly.', category: 'Everyday', iconName: 'Scale3d' },
+  { slug: 'leap-year', title: 'Leap Year Checker', description: 'Quickly find out if any given year is a leap year.', category: 'Everyday', iconName: 'CalendarClock' },
+  // Auto
+  { slug: '0-60', title: '0-60 Time Estimator', description: 'Estimate a car\'s 0-60 mph time based on weight and horsepower.', category: 'Auto', iconName: 'TimerReset' },
+  { slug: 'horsepower', title: 'Horsepower to kW', description: 'Convert engine power between Horsepower and Kilowatts.', category: 'Auto', iconName: 'Zap' },
+  { slug: 'tire-size', title: 'Tire Size Comparison', description: 'Compare tire dimensions and find speedometer differences.', category: 'Auto', iconName: 'Circle' },
+  { slug: 'ev-charging', title: 'EV Charging Time', description: 'Calculate how long it takes to charge an Electric Vehicle.', category: 'Auto', iconName: 'BatteryCharging' }
 ];

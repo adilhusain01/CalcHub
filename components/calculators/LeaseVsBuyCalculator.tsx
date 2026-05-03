@@ -55,10 +55,10 @@ export function LeaseVsBuyCalculator() {
   const results = calculate();
 
   return (
-    <Card className="w-full bg-white shadow-xl shadow-gray-200/50">
-      <CardHeader className="bg-gray-50/50 border-b border-gray-100">
-        <CardTitle>Lease vs Buy Calculator</CardTitle>
-        <CardDescription>Compare monthly payments and true cost.</CardDescription>
+    <Card className="w-full bg-white shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-[3px] border-black rounded-[24px]">
+      <CardHeader className="bg-[#f3e5ca] border-b-[3px] border-black rounded-t-[21px]">
+        <CardTitle className="text-2xl font-black">Lease vs Buy Calculator</CardTitle>
+        <CardDescription className="text-black font-bold">Compare monthly payments and true cost.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-4">
         
@@ -74,7 +74,7 @@ export function LeaseVsBuyCalculator() {
         </div>
         
         <div className="border-t border-gray-100 my-2 pt-2">
-            <p className="text-sm font-semibold text-gray-900 mb-2">Lease Terms</p>
+            <p className="text-sm font-semibold text-black mb-2">Lease Terms</p>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mb-2">
                 <div className="space-y-2"><Label>Residual Val</Label><Input type="number" value={residualValue} onChange={e => setResidualValue(e.target.value === '' ? '' : Number(e.target.value))}/></div>
                 <div className="space-y-2"><Label>Down Pmt</Label><Input type="number" value={leaseDown} onChange={e => setLeaseDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
@@ -83,7 +83,7 @@ export function LeaseVsBuyCalculator() {
         </div>
 
         <div className="border-t border-gray-100 my-2 pt-2">
-            <p className="text-sm font-semibold text-gray-900 mb-2">Loan Terms</p>
+            <p className="text-sm font-semibold text-black mb-2">Loan Terms</p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-2"><Label>Interest Rate (%)</Label><Input type="number" step="0.1" value={loanRate} onChange={e => setLoanRate(e.target.value === '' ? '' : Number(e.target.value))}/></div>
                 <div className="space-y-2"><Label>Down Pmt</Label><Input type="number" value={buyDown} onChange={e => setBuyDown(e.target.value === '' ? '' : Number(e.target.value))}/></div>
@@ -91,20 +91,20 @@ export function LeaseVsBuyCalculator() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-center shadow-sm">
-            <p className="text-blue-800 text-xs font-semibold uppercase tracking-wider mb-1">Lease Monthly</p>
-            <p className="text-2xl font-bold text-blue-900 tracking-tight">
+          <div className="rounded-[24px] border-[3px] border-black bg-[#4a8eff] p-4 text-center shadow-[4px_4px_0_0_#000]">
+            <p className="text-black text-xs font-bold uppercase tracking-wider mb-1">Lease Monthly</p>
+            <p className="text-3xl font-black text-black tracking-tight">
               ${results.leaseMonthly.toFixed(2)}
             </p>
-            <p className="text-xs text-blue-700 mt-2">Total spent: ${results.totalLeaseCost.toFixed(0)}</p>
+            <p className="text-sm font-bold text-black mt-2">Total spent: ${results.totalLeaseCost.toFixed(0)}</p>
           </div>
           
-          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center shadow-sm">
-            <p className="text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-1">Buy Monthly</p>
-            <p className="text-2xl font-bold text-emerald-900 tracking-tight">
+          <div className="rounded-[24px] border-[3px] border-black bg-[#a7e0a5] p-4 text-center shadow-[4px_4px_0_0_#000]">
+            <p className="text-black text-xs font-bold uppercase tracking-wider mb-1">Buy Monthly</p>
+            <p className="text-3xl font-black text-black tracking-tight">
               ${results.buyMonthly.toFixed(2)}
             </p>
-            <p className="text-xs text-emerald-700 mt-2">True Cost: ${(results.trueCostToOwn).toFixed(0)}</p>
+            <p className="text-sm font-bold text-black mt-2">True Cost: ${(results.trueCostToOwn).toFixed(0)}</p>
           </div>
         </div>
       </CardContent>

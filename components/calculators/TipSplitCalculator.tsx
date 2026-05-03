@@ -30,10 +30,10 @@ export function TipSplitCalculator() {
   const results = calculate();
 
   return (
-    <Card className="w-full bg-white shadow-xl shadow-gray-200/50">
-      <CardHeader className="bg-gray-50/50 border-b border-gray-100">
-        <CardTitle>Tip & Bill Splitter</CardTitle>
-        <CardDescription>Split bills and calculate tips instantly.</CardDescription>
+    <Card className="w-full bg-white shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-[3px] border-black rounded-[24px]">
+      <CardHeader className="bg-[#f3e5ca] border-b-[3px] border-black rounded-t-[21px]">
+        <CardTitle className="text-2xl font-black">Tip & Bill Splitter</CardTitle>
+        <CardDescription className="text-black font-bold">Split bills and calculate tips instantly.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-6">
         <div className="space-y-4">
@@ -54,7 +54,7 @@ export function TipSplitCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between">
               <Label>Tip Percentage</Label>
-              <span className="text-sm font-semibold text-gray-900">{tipPercentage}%</span>
+              <span className="text-sm font-semibold text-black">{tipPercentage}%</span>
             </div>
             <div className="grid grid-cols-2 gap-2 pt-1 sm:grid-cols-4">
               {[15, 18, 20, 25].map((pct) => (
@@ -103,24 +103,24 @@ export function TipSplitCalculator() {
           </div>
         </div>
 
-        <div className="rounded-xl bg-gray-900 p-6 text-white mt-6 shadow-xl">
+        <div className="rounded-[24px] bg-[#f9c2e0] p-6 text-black mt-6 shadow-[4px_4px_0_0_#000] border-[3px] border-black">
           <div className="flex justify-between items-end mb-4">
             <div>
-              <p className="text-gray-400 text-sm font-medium mb-1">Total per person</p>
-              <p className="text-4xl font-bold tracking-tight text-white">
+              <p className="text-black font-bold text-sm mb-1">Total per person</p>
+              <p className="text-4xl md:text-5xl font-black tracking-tight text-black">
                 ${results.perPerson.toFixed(2)}
               </p>
             </div>
           </div>
           
-          <div className="flex justify-between mt-4 border-t border-gray-700/50 pt-4 text-sm">
+          <div className="flex justify-between mt-4 border-t-2 border-black pt-4 text-sm font-bold">
             <div>
-              <p className="text-gray-400">Total Tip</p>
-              <p className="font-semibold text-gray-200">${results.tipAmount.toFixed(2)}</p>
+              <p className="text-black">Total Tip</p>
+              <p className="text-black">${results.tipAmount.toFixed(2)}</p>
             </div>
             <div className="text-right">
-              <p className="text-gray-400">Total Bill (w/ Tip)</p>
-              <p className="font-semibold text-gray-200">${results.totalBill.toFixed(2)}</p>
+              <p className="text-black">Total Bill (w/ Tip)</p>
+              <p className="text-black">${results.totalBill.toFixed(2)}</p>
             </div>
           </div>
         </div>

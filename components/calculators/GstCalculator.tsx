@@ -36,10 +36,10 @@ export function GstCalculator() {
   const results = calculateGST();
 
   return (
-    <Card className="w-full bg-white shadow-xl shadow-gray-200/50">
-      <CardHeader className="bg-gray-50/50 border-b border-gray-100">
-        <CardTitle>GST Calculator</CardTitle>
-        <CardDescription>Quickly calculate inclusive and exclusive GST.</CardDescription>
+    <Card className="w-full bg-white shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-[3px] border-black rounded-[24px]">
+      <CardHeader className="bg-[#f3e5ca] border-b-[3px] border-black rounded-t-[21px]">
+        <CardTitle className="text-2xl font-black">GST Calculator</CardTitle>
+        <CardDescription className="text-black font-bold">Quickly calculate inclusive and exclusive GST.</CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-6">
         <div className="flex bg-gray-100 p-1 rounded-lg">
@@ -93,19 +93,19 @@ export function GstCalculator() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 p-6 bg-gray-50 mt-6 shadow-sm">
+        <div className="rounded-[24px] bg-[#a7e0a5] p-6 text-black mt-6 shadow-[4px_4px_0_0_#000] border-[3px] border-black">
           <div className="space-y-3">
-             <div className="flex justify-between text-sm">
-                <span className="text-gray-500">Net Price {mode === 'remove' && '(Before GST)'}</span>
-                <span className="font-semibold text-gray-900">${results.netPrice.toFixed(2)}</span>
+             <div className="flex justify-between text-sm font-bold">
+                <span className="text-black">Net Price {mode === 'remove' && '(Before GST)'}</span>
+                <span className="font-black text-black">${results.netPrice.toFixed(2)}</span>
              </div>
-             <div className="flex justify-between text-sm text-blue-600">
+             <div className="flex justify-between text-sm font-bold">
                 <span>+ GST ({rate}%)</span>
-                <span className="font-semibold">${results.gstAmount.toFixed(2)}</span>
+                <span className="font-black">${results.gstAmount.toFixed(2)}</span>
              </div>
-             <div className="pt-3 border-t border-gray-200 flex justify-between items-center mt-2">
-                <span className="font-bold text-gray-900 uppercase tracking-wider text-sm">Gross Price</span>
-                <span className="text-2xl font-bold tracking-tight text-gray-900">${results.totalPrice.toFixed(2)}</span>
+             <div className="pt-3 border-t-2 border-black flex justify-between items-center mt-2">
+                <span className="font-black text-black uppercase tracking-wider text-sm">Gross Price</span>
+                <span className="text-2xl md:text-3xl font-black tracking-tight text-black">${results.totalPrice.toFixed(2)}</span>
              </div>
           </div>
         </div>
