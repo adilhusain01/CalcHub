@@ -78,18 +78,28 @@ export default async function CalculatorPage({
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        {/* Left Col - App info and SEO text */}
-        <div className="lg:col-span-5 flex flex-col pt-4">
+        {/* Header Info */}
+        <div className="order-1 lg:col-span-5 flex flex-col pt-4">
           <div className="inline-flex align-center w-max px-3 py-1 rounded-full text-sm font-extrabold bg-[#4a8eff] text-white border-2 border-black mb-6 uppercase tracking-wider">
             {calc.category}
           </div>
-          <h1 className="text-5xl font-black tracking-tight text-black mb-6 leading-tight">
+          <h1 className="text-3xl lg:text-5xl font-black tracking-tight text-black mb-6 leading-tight">
             {calc.title}
           </h1>
-          <p className="text-xl font-medium text-gray-800 mb-10 leading-relaxed">
+          <p className="text-lg lg:text-xl font-medium text-gray-800 mb-10 leading-relaxed">
             {calc.description}
           </p>
+        </div>
 
+        {/* Right Col - The robust component itself */}
+        <div className="order-2 lg:col-span-7 lg:row-span-2 flex justify-center lg:justify-end lg:pt-14">
+          <div className="w-full max-w-lg lg:scale-[1.05] origin-top">
+            {getCalculatorComponent(calc.slug)}
+          </div>
+        </div>
+
+        {/* Embed Instructions */}
+        <div className="order-3 lg:col-span-5">
           <div className="bg-[#a7e0a5] border-[3px] border-black rounded-[24px] p-6 mb-8 shadow-[4px_4px_0_0_#000]">
             <h3 className="font-black text-2xl text-black mb-2">
               Embed for Free
@@ -99,13 +109,6 @@ export default async function CalculatorPage({
               instant value.
             </p>
             <EmbedInstructions slug={calc.slug} />
-          </div>
-        </div>
-
-        {/* Right Col - The robust component itself */}
-        <div className="lg:col-span-7 flex justify-center lg:justify-end lg:pt-14">
-          <div className="w-full max-w-lg lg:scale-[1.05] origin-top">
-            {getCalculatorComponent(calc.slug)}
           </div>
         </div>
       </div>

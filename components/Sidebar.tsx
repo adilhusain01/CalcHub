@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Calculator } from "lucide-react";
-import { ReactNode } from "react";
+import { Calculator, Menu, X } from "lucide-react";
+import { ReactNode, useState, useEffect } from "react";
 
 interface SidebarItemProps {
   href: string;
@@ -51,11 +51,34 @@ export function SidebarItem({
 }
 
 export function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
-    <aside className="w-full lg:w-72 border-[3px] border-black rounded-[32px] p-6 flex flex-col gap-8 shrink-0 self-start lg:sticky top-6 bg-[#f3e5ca]">
+    <div className="w-full lg:w-72 shrink-0 flex flex-col gap-4 self-start lg:sticky lg:top-6">
+      <div className="lg:hidden w-full flex items-center justify-between p-4 border-[3px] border-black rounded-[24px] bg-white font-bold text-lg shadow-[4px_4px_0_0_#000]">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="bg-[#4a8eff] border-[2px] border-black rounded-full w-10 h-10 flex items-center justify-center overflow-hidden">
+            <img src="/logo.png" alt="CalcHub Logo" className="w-full h-full object-cover" />
+          </div>
+          <span className="font-extrabold text-xl tracking-tight text-black">CalcHub</span>
+        </Link>
+        <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 flex items-center justify-center">
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      <aside className={cn(
+        "w-full border-[3px] border-black rounded-[32px] p-6 flex-col gap-8 bg-[#f3e5ca]",
+        isOpen ? "flex" : "hidden lg:flex"
+      )}>
       <Link
         href="/"
-        className="flex items-center gap-3 bg-white border-[3px] border-black rounded-[24px] p-4 group hover:-translate-y-1 transition-transform shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
+        className="hidden lg:flex items-center gap-3 bg-white border-[3px] border-black rounded-[24px] p-4 group hover:-translate-y-1 transition-transform shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
       >
         <div className="bg-[#4a8eff] border-[2px] border-black rounded-full w-12 h-12 flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform">
           {/* <Calculator className="h-6 w-6 text-white" /> */}
@@ -141,5 +164,6 @@ export function Sidebar() {
         </div>
       </div>
     </aside>
+    </div>
   );
 }
